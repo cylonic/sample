@@ -1,4 +1,4 @@
-package health
+package com.example.health
 
 import io.micronaut.context.annotation.Property
 import io.micronaut.health.HealthStatus
