@@ -10,7 +10,7 @@ plugins {
 version = "0.1"
 group = "com.example"
 
-val kotlinVersion=project.properties.get("kotlinVersion")
+val kotlinVersion = project.properties.get("kotlinVersion")
 repositories {
     mavenCentral()
 }
@@ -26,9 +26,12 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     testImplementation("io.micronaut:micronaut-http-client")
+    testImplementation(kotlin("test"))
 
     implementation("io.micronaut:micronaut-management")
-    implementation(project(":utils"))
+    implementation("io.micronaut.reactor:micronaut-reactor")
+    implementation("io.micronaut.reactor:micronaut-reactor-http-client")
+    implementation("org.yaml:snakeyaml:1.8")
 }
 
 
